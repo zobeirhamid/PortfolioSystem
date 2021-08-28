@@ -58,6 +58,16 @@ All API Endpoints can be found at `routes/api.php`. They all have a prefix there
 
 ## Troubleshoot
 
+### File Size too Big
+
 I had some websites which were bigger than 2M, therefore I had to increase the `upload_max_filesize` and `post_max_size` in my `php.ini`. If you do not know how to find your `php.ini`, you can open `server.php` then add `phpinfo();` to the body. Then run `php artisan serve` and open `http://127.0.0.1:8000`. You should see all your configurations also where `php.ini` is located. Open `php.ini` search for `upload_max_filesize` and `post_max_size` and increase both to something like `10M`. Finally remove `phpinfo();` from `server.php`.
 
 If you are using Laravel Forge, you can increase the `upload_max_filesize` and `post_max_size` directly on their webpage.
+
+### Cannot access readonly database
+
+In this case, you need to change the permission of the database. From the root execute the following commands:
+```
+chown www-data:www-data database
+chown www-data:www-data database/database.sqlite
+```
