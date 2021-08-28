@@ -2,6 +2,8 @@
 
 Portfolio System written in Laravel & Vue to manage all your design & coding work at one place.
 
+[Demo](http://137.184.42.245/)
+
 ## Features
 
 - Fully tested backend
@@ -10,7 +12,7 @@ Portfolio System written in Laravel & Vue to manage all your design & coding wor
 - Admin Panel with Drag & Drop
 - Automatically unzipping HTML websites and creating a demo
 
-## Requirements:
+## Requirements
 
 - php@7.1
 - pngquant
